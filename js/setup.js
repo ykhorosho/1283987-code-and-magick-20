@@ -28,7 +28,7 @@ function wizardsPlayersCreate() {
       coatColor: coatColors[getRandomInt(coatColors.length)],
       eyesColor: eyesColors[getRandomInt(eyesColors.length)]
     };
-    wizards.push(wizard); //добавили объект в массив
+    wizards.push(wizard);
   }
   return wizards;
 }

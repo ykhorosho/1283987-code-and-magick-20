@@ -33,7 +33,7 @@ var getMaxElement = function (arr) {
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
-};
+}
 
 window.renderStatistics = function (ctx, players, results) {
 
