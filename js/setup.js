@@ -1,3 +1,4 @@
+// Файл setup.js
 'use strict';
 
 var userDialog = document.querySelector('.setup');
@@ -48,6 +49,8 @@ for (var i = 0; i < wizards.length; i++) {
 document.querySelector('.setup-similar').classList.remove('hidden');
 
 // Открытие закрытие окна настройки персонажа:
+// Файл dialog.js
+'use strict';
 
 var setup = document.querySelector('.setup');
 var setupOpen = document.querySelector('.setup-open');
@@ -103,7 +106,7 @@ setupClose.addEventListener('keydown', function (evt) {
 
 
 // Валидация ввода имени персонажа
-
+// Файл validname.js
 var MIN_NAME_LENGTH = 2;
 var MAX_NAME_LENGTH = 25;
 
@@ -127,38 +130,40 @@ userNameInput.addEventListener('input', function (evt) {
 });
 
 // Изминение цвета
+// Файл сolorize.js
+(function ()
+// var wizardCoat = document.querySelector('.setup-wizard .wizard-coat');
+// var wizardEyes = document.querySelector('.setup-wizard .wizard-eyes');
+// var wizardFireball = document.querySelector('.setup-fireball-wrap');
+// var wizardInputCoat = document.querySelector('input[name="coat-color"]');
+// var wizardInputEyes = document.querySelector('input[name="eyes-color"]');
+// var wizardInputFireball = document.querySelector('input[name="fireball-color"]');
 
-var wizardCoat = document.querySelector('.setup-wizard .wizard-coat');
-var wizardEyes = document.querySelector('.setup-wizard .wizard-eyes');
-var wizardFireball = document.querySelector('.setup-fireball-wrap');
-var wizardInputCoat = document.querySelector('input[name="coat-color"]');
-var wizardInputEyes = document.querySelector('input[name="eyes-color"]');
-var wizardInputFireball = document.querySelector('input[name="fireball-color"]');
 
+// var getColor = function (colorArray) {
+//   var color = colorArray[getRandomInt(colorArray.length)];
+//   return color;
+// };
 
-var getColor = function (colorArray) {
-  var color = colorArray[getRandomInt(colorArray.length)];
-  return color;
-};
+// wizardCoat.addEventListener('click', function (evt) {
+//   var color = getColor(coatColors);
+//   evt.target.style.fill = color;
+//   wizardInputCoat.value = color;
+// });
 
-wizardCoat.addEventListener('click', function (evt) {
-  var color = getColor(coatColors);
-  evt.target.style.fill = color;
-  wizardInputCoat.value = color;
-});
+// wizardEyes.addEventListener('click', function (evt) {
+//   var color = getColor(eyesColors);
+//   evt.target.style.fill = color;
+//   wizardInputEyes.value = color;
+// });
 
-wizardEyes.addEventListener('click', function (evt) {
-  var color = getColor(eyesColors);
-  evt.target.style.fill = color;
-  wizardInputEyes.value = color;
-});
-
-wizardFireball.addEventListener('click', function (evt) {
-  var color = getColor(fireballColors);
-  evt.target.style.backgroundColor = color;
-  wizardInputFireball.value = color;
-});
+// wizardFireball.addEventListener('click', function (evt) {
+//   var color = getColor(fireballColors);
+//   evt.target.style.backgroundColor = color;
+//   wizardInputFireball.value = color;
+// });
 
 // Отправка формы
+// Файл form.js
 var wizardForm = document.querySelector('.setup-wizard-form');
 wizardForm.action = 'https://javascript.pages.academy/code-and-magick';
