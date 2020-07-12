@@ -1,8 +1,16 @@
 // Перемещение
 'use strict';
 (function () {
+
   var setupDialogElement = document.querySelector('.setup');
   var dialogHandle = setupDialogElement.querySelector('.upload');
+
+  window.move = {
+    x: setupDialogElement.offsetLeft,
+    y: setupDialogElement.offsetTop
+  };
+
+  // console.log(window.move);
 
   dialogHandle.addEventListener('mousedown', function (evt) {
     evt.preventDefault();
@@ -42,7 +50,7 @@
       if (dragged) {
         var onClickPreventDefault = function (clickEvt) {
           clickEvt.preventDefault();
-          dialogHandle.removeEventListener('click', onClickPreventDefault)
+          dialogHandle.removeEventListener('click', onClickPreventDefault);
         };
         dialogHandle.addEventListener('click', onClickPreventDefault);
       }
@@ -51,5 +59,4 @@
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
   });
-
 })();

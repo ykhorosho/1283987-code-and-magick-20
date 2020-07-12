@@ -30,7 +30,8 @@
 
   var closePopup = function () {
     setup.classList.add('hidden');
-
+    setup.style.top = window.move.y + 'px';
+    setup.style.left = window.move.x + 'px';
     document.removeEventListener('keydown', onPopupEscPress);
   };
 
@@ -53,4 +54,6 @@
       closePopup();
     }
   });
+
+
 })();
